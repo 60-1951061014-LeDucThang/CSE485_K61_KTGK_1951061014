@@ -59,7 +59,7 @@ class DocGiaModal{
     public function update($bd = []) {
         $connection = $this->connectDb();
         $queryUpdate = "UPDATE DocGia
-        SET name = '{$bd['hovaten']}', giotinh = '{$bd['gioitinh']}', namsinh= '{$bd['namsinh']}', nghenghiep = '{$bd['nghenghiep']}' , ngaycapthe = '{$bd['ngaycapthe']}', ngayhethan = '{$bd['ngayhethan']}', diachi = '{$bd['diachi']}' WHERE madg = {$bd['madg']}";
+        SET hovaten = '{$bd['hovaten']}', gioitinh = '{$bd['gioitinh']}', namsinh= '{$bd['namsinh']}', nghenghiep = '{$bd['nghenghiep']}' , ngaycapthe = '{$bd['ngaycapthe']}', ngayhethan = '{$bd['ngayhethan']}', diachi = '{$bd['diachi']}' WHERE madg = {$bd['madg']}";
         $isUpdate = mysqli_query($connection, $queryUpdate);
         $this->closeDb($connection);
 

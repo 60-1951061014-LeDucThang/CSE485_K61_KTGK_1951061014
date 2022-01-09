@@ -19,6 +19,9 @@ require 'view/template/header.php'
                             <th scope="col">Giới Tính</th>
                             <th scope="col">Năm sinh</th>
                             <th scope="col">Nghề nghiệp</th>
+                            <th scope="col">Ngày cấp thẻ</th>
+                            <th scope="col">Ngày hết hạn</th>
+                            <th scope="col">Địa chỉ</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,11 +29,14 @@ require 'view/template/header.php'
                         foreach ($bdonor as $bd) {
                         ?>
                             <tr>
-                                <th scope="row"><?php echo $bd['id'] ?></th>
-                                <td><?php echo $bd['name'] ?></td>
-                                <td><?php echo $bd['type'] ?></td>
-                                <td><?php echo $bd['barcode'] ?></td>
-                                <td><?php echo $bd['dose'] ?></td>
+                                <th scope="row"><?php echo $bd['madg'] ?></th>
+                                <td><?php echo $bd['hovaten'] ?></td>
+                                <td><?php echo $bd['gioitinh'] ?></td>
+                                <td><?php echo $bd['namsinh'] ?></td>
+                                <td><?php echo $bd['nghenghiep'] ?></td>
+                                <td><?php echo $bd['ngaycapthe'] ?></td>
+                                <td><?php echo $bd['ngayhethan'] ?></td>
+                                <td><?php echo $bd['diachi'] ?></td>
                             </tr>
                         <?php
                         }

@@ -1,16 +1,16 @@
 <?php
 
-require_once 'model/DocGiaModel.php';
+require_once 'model/DocgiaModel.php';
 class DocGiaController{
     function index(){
         $bdModal = new DocGiaModal();
         $bdonor = $bdModal->getAllBD();
-        require_once 'view/DocGia/index.php';
+        require_once 'view/Docgia/index.php';
     }
     function admin(){
         $bdModal = new DocGiaModal();
         $bdonor = $bdModal->getAllBD();
-        require_once 'view/DocGia/admin.php';
+        require_once 'view/Docgia/admin.php';
     }
     function add(){
         $error = '';
@@ -50,17 +50,17 @@ class DocGiaController{
         require_once 'view/DocGia/add.php';
     }
     function edit(){
-        if (!isset($_GET['madg'])) {
+        if (!isset($_GET['id'])) {
             $_SESSION['error'] = "Tham số không hợp lệ";
             header("Location: index.php?controller=DocGia&action=admin");
             return;
         }
-        if (!is_numeric($_GET['madg'])) {
+        if (!is_numeric($_GET['id'])) {
             $_SESSION['error'] = "madg phải là số";
             header("Location: index.php?controller=DocGia&action=admin");
             return;
         }
-        $id = $_GET['madg'];
+        $id = $_GET['id'];
         $bdModal = new DocGiaModal();
         $BD = $bdModal->getBDById($id);
         $error = '';
@@ -78,7 +78,7 @@ class DocGiaController{
             }
             else {
                 $bdArr = [
-                    'madg' => $madg,
+                    'madg' => $id,
                     'hovaten' => $hovaten,
                     'gioitinh' => $gioitinh,
                     'namsinh' => $namsinh,
@@ -101,9 +101,9 @@ class DocGiaController{
         require_once 'view/DocGia/edit.php';
     }
     function delete(){
-        $id = $_GET['madg'];
+        $id = $_GET['id'];
         if (!is_numeric($id)) {
-            header("Location: index.php?controller=DocGia&action=index");
+            header("Location: index.php?controller=docgia&action=index");
             exit();
         }
         $bdModal = new DocGiaModal();
@@ -117,7 +117,7 @@ class DocGiaController{
             //báo lỗi
             $TT = "Xóa bản ghi thất bại";
         }
-        header("Location: index.php?controller=DocGia&action=admin&tt=$TT");
+        header("Location: index.php?controller=docgia&action=admin&tt=$TT");
         exit();
     }
 }

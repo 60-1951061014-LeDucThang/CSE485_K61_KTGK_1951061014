@@ -33,15 +33,15 @@ require 'view/template/header.php'
                         <?php
                         foreach ($bdonor as $bd) {
                             $urlEdit =
-                            "index.php?controller=DocGia&action=edit&id=" . $bd['madg'];
+                            "index.php?controller=docgia&action=edit&id=" . $bd['madg'];
                             $urlDelete =
-                            "index.php?controller=DocGia&action=delete&id=" . $bd['madg'];
+                            "index.php?controller=docgia&action=delete&id=" . $bd['madg'];
                         ?>
                             <tr>
                                 <th scope="row"><?php echo $bd['madg'] ?></th>
                                 <td><?php echo $bd['hovaten'] ?></td>
                                 <td><?php echo $bd['gioitinh'] ?></td>
-                                <td><?php echo $bd['naminh'] ?></td>
+                                <td><?php echo $bd['namsinh'] ?></td>
                                 <td><?php echo $bd['nghenghiep'] ?></td>
                                 <td><?php echo $bd['ngaycapthe'] ?></td>
                                 <td><?php echo $bd['ngayhethan'] ?></td>

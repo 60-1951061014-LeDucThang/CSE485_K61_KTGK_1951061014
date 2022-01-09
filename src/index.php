@@ -1,5 +1,5 @@
 <?php
-    $controller = isset($_GET['controller']) ? $_GET['controller'] : 'DocGia';
+    $controller = isset($_GET['controller']) ? $_GET['controller'] : 'docgia';
     $action     = isset($_GET['action']) ? $_GET['action'] : 'index';
     $controller = ucfirst($controller);
     $fileController = $controller . "Controller.php";

@@ -32,11 +32,11 @@ require 'view/template/header.php'
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustom02" class="form-label">Ngày Cấp Thẻ</label>
-                        <input type="text" class="form-control" name="ngaycapthe" id="validationCustom02" value="<?php echo isset($_POST['ngaycapthe']) ? $_POST['ngaycapthe'] : $BD['ngaycapthe']?>" required>
+                        <input type="date" class="form-control" name="ngaycapthe" id="validationCustom02" value="<?php echo isset($_POST['ngaycapthe']) ? $_POST['ngaycapthe'] : $BD['ngaycapthe']?>" required>
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustom02" class="form-label">Ngày Hết Hạn</label>
-                        <input type="text" class="form-control" name="ngayhethan" id="validationCustom02" value="<?php echo isset($_POST['ngayhethan']) ? $_POST['ngayhethan'] : $BD['ngayhethan']?>" required>
+                        <input type="date" class="form-control" name="ngayhethan" id="validationCustom02" value="<?php echo isset($_POST['ngayhethan']) ? $_POST['ngayhethan'] : $BD['ngayhethan']?>" required>
                     </div>
                     <div class="col-md-6">
                         <label for="validationCustom02" class="form-label">Địa Chỉ</label>
